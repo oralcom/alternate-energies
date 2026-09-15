@@ -22,7 +22,7 @@ if (!motionPreference.matches && 'IntersectionObserver' in window) {
 }
 const trendData = {
   capacity: { years: [2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024], values: [1360,1420,1450,1517,1580,1660,1770,1915,2080,2330,2800,3210,4200,5155], unit: 'GW' },
-  jobs: { years: [2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024], values: [6.8,7.1,7.7,8.0,8.1,8.3,8.6,9.0,9.4,9.8,10.3,12.7,16.2,16.6], unit: 'M jobs' },
+  employment: { years: [2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024], values: [6.8,7.1,7.7,8.0,8.1,8.3,8.6,9.0,9.4,9.8,10.3,12.7,16.2,16.6], unit: 'M jobs' },
   cost: { years: [2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024], values: [0.38,0.35,0.31,0.27,0.24,0.22,0.19,0.17,0.15,0.13,0.12,0.11,0.10,0.09], unit: 'USD/kWh' }
 };
 document.querySelectorAll('.interactive-chart').forEach(card => {
@@ -33,7 +33,7 @@ document.querySelectorAll('.interactive-chart').forEach(card => {
   const points = data.years.map((year,index) => {
     const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
     const x = 12 + (index * (type === 'cost' ? 585 : 395) / (data.years.length - 1));
-    const y = type === 'capacity' ? 135 - index * 8.7 : type === 'jobs' ? 145 - index * 7.7 : 45 + index * 8.8;
+    const y = type === 'capacity' ? 135 - index * 8.7 : type === 'employment' ? 145 - index * 7.7 : 45 + index * 8.8;
     circle.setAttribute('cx',x); circle.setAttribute('cy',y); circle.setAttribute('r','5'); circle.setAttribute('tabindex','0'); circle.setAttribute('class','trend-point '+type); circle.dataset.year=year; circle.dataset.value=data.values[index]; svg.append(circle); return circle;
   });
   const show = point => { tooltip.innerHTML='<strong>'+point.dataset.year+'</strong><span>'+point.dataset.value+' '+data.unit+'</span>'; tooltip.hidden=false; if(total) total.textContent=Number(point.dataset.value).toLocaleString(); if(unit && type !== 'cost') unit.textContent=data.unit; };
