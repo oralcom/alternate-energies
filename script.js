@@ -170,3 +170,20 @@ if (backTop) {
   updateBackTop();
   window.addEventListener('scroll', updateBackTop, { passive: true });
 }
+document.querySelectorAll('.count-up').forEach(counter => {
+  const target = Number(counter.dataset.target || 0), suffix = counter.dataset.suffix || '';
+  let started = false;
+  const animate = () => {
+    if (started) return; started = true;
+    const start = performance.now(), duration = 1500;
+    const tick = now => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      counter.textContent = Math.round(target * eased).toLocaleString() + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  if ('IntersectionObserver' in window) new IntersectionObserver(entries => entries.forEach(entry => entry.isIntersecting && animate()), { threshold: .35 }).observe(counter);
+  else animate();
+});
