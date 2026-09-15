@@ -16,7 +16,8 @@ services.forEach(service => {
 home = home.replace('href="#about" aria-label="Learn about Alternate Energies"', 'href="about.html" aria-label="Learn about Alternate Energies"');
 const statisticsSection = `<section class="statistics-strip" id="statistics"><div class="statistics-heading"><p>Our progress at a glance</p><h2>Building a more<br><span>connected energy future.</span></h2><a class="text-link" href="statistics.html">Browse all statistics &#8599;</a></div><div class="statistics-grid"><div><strong class="count-up" data-target="2850" data-suffix="+">0</strong><span>Customers supported</span></div><div><strong class="count-up" data-target="64">0</strong><span>Team members</span></div><div><strong class="count-up" data-target="42">0</strong><span>Partner profiles</span></div><div><strong class="count-up" data-target="2011">0</strong><span>Established in the UK</span></div></div></section>`;
 home = home.replace(/<section class="statistics-strip"[\s\S]*?<\/section>/g, '');
-home = home.replace('<section class="section process">', statisticsSection+'<section class="section process">');
+home = home.replace('<section class="section process">', '<section class="section process">');
+home = home.replace('  <div class="intro-strip company-strip">', '  '+statisticsSection+'\n  <div class="intro-strip company-strip">');
 fs.writeFileSync('index.html', home);
 const header = home.match(/<header[\s\S]*?<\/header>/)[0] + (home.match(/<div class="sidebar-backdrop"[\s\S]*?<\/aside>/)?.[0] || '');
 let footer = home.match(/<footer[^>]*>[\s\S]*?<\/footer>/)[0];
