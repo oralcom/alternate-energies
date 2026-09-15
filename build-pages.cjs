@@ -14,6 +14,8 @@ services.forEach(service => {
   home = home.replace(`href="#contact" data-service="${service.name}"`, `href="${service.slug}.html"`);
 });
 home = home.replace('href="#about" aria-label="Learn about Alternate Energies"', 'href="about.html" aria-label="Learn about Alternate Energies"');
+const statisticsSection = `<section class="statistics-strip" id="statistics"><div class="statistics-heading"><p>Our progress at a glance</p><h2>Building a more<br><span>connected energy future.</span></h2><a class="text-link" href="statistics.html">Browse all statistics &#8599;</a></div><div class="statistics-grid"><div><strong>250+</strong><span>Customers supported <em>confirm before launch</em></span></div><div><strong>18</strong><span>Team members <em>confirm before launch</em></span></div><div><strong>15</strong><span>Partner profiles</span></div><div><strong>2011</strong><span>Established in the UK</span></div></div></section>`;
+home = home.replace('<section class="section process">', statisticsSection+'<section class="section process">');
 fs.writeFileSync('index.html', home);
 const header = home.match(/<header[\s\S]*?<\/header>/)[0] + (home.match(/<div class="sidebar-backdrop"[\s\S]*?<\/aside>/)?.[0] || '');
 let footer = home.match(/<footer[^>]*>[\s\S]*?<\/footer>/)[0];
