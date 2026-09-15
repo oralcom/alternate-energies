@@ -164,7 +164,7 @@ if (backTop) {
     backTop.innerHTML = atTop ? '&darr;' : '&uarr;';
     backTop.setAttribute('aria-label', atTop ? 'Scroll to bottom' : 'Back to top');
     backTop.classList.toggle('is-down', atTop);
-    if (atTop) backTop.href = '#main';
+    if (atTop) backTop.href = '#footer';
     else backTop.href = '#main';
   };
   updateBackTop();
