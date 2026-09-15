@@ -157,3 +157,16 @@ document.querySelector('#enquiry-form')?.addEventListener('submit', event => {
   link.textContent = 'Download your enquiry';
   status.append(link);
 });
+const backTop = document.querySelector('[data-back-top]');
+if (backTop) {
+  const updateBackTop = () => {
+    const atTop = window.scrollY < 160;
+    backTop.innerHTML = atTop ? '&darr;' : '&uarr;';
+    backTop.setAttribute('aria-label', atTop ? 'Scroll to bottom' : 'Back to top');
+    backTop.classList.toggle('is-down', atTop);
+    if (atTop) backTop.href = '#main';
+    else backTop.href = '#main';
+  };
+  updateBackTop();
+  window.addEventListener('scroll', updateBackTop, { passive: true });
+}
