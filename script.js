@@ -9,7 +9,7 @@ if (!motionPreference.matches && 'IntersectionObserver' in window) {
       observer.unobserve(entry.target);
     });
   }, { threshold: 0.08 });
-  document.querySelectorAll('.section-heading, .service-card, .about-photo, .about-copy, .locations > div, .steps article, .contact-copy, #enquiry-form').forEach(element => {
+  document.querySelectorAll('.section-heading, .service-card, .about-photo, .about-copy, .locations > div, .steps article, .contact-copy, #enquiry-form, .page-hero, .institution-banner, .topic-grid > a, .topic-article, .topic-related, .partner-card, .partner-group-title, .data-chart, .dashboard-details, .data-story, .featured-data, .company-profile, .company-values, .company-record, .legal-content, .connect-band, .footer-columns > *').forEach(element => {
     element.classList.add('motion-reveal');
     observer.observe(element);
   });

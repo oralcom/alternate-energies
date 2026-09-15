@@ -106,3 +106,16 @@ body{background:#fff}.header{height:88px;background:#fff;padding:0 3%;gap:22px}.
 @media(max-width:650px){.featured-data-grid{grid-template-columns:1fr}.data-story{margin-top:45px}.data-story h2,.featured-data h2{font-size:26px}}
 /* More open heading typography for readability. */
 h1,h2,h3{letter-spacing:0!important}.data-chart h3{letter-spacing:.1px!important;line-height:1.45}.stats-dashboard-heading h2,.data-story h2,.featured-data h2{letter-spacing:.1px!important}.institution-banner h1{letter-spacing:.2px!important}
+/* Page-wide motion language: restrained entrances with gentle stagger. */
+@media(prefers-reduced-motion:no-preference){
+  .page-hero,.institution-banner{animation:page-banner-in .65s cubic-bezier(.2,.65,.3,1) both}
+  .topic-grid>a:nth-child(2),.partner-card:nth-child(2),.data-chart:nth-child(2),.footer-columns>*:nth-child(2){transition-delay:70ms}
+  .topic-grid>a:nth-child(3),.partner-card:nth-child(3),.data-chart:nth-child(3),.footer-columns>*:nth-child(3){transition-delay:140ms}
+  .topic-grid>a:nth-child(4),.partner-card:nth-child(4){transition-delay:210ms}
+  .partner-card,.topic-grid>a,.data-chart,.dashboard-details,.data-story,.featured-data,.company-profile,.company-values,.company-record,.legal-content,.connect-band,.footer-columns>*{transition-property:opacity,transform,background-color,border-color;transition-duration:.65s;transition-timing-function:cubic-bezier(.2,.65,.3,1)}
+  .topic-grid>a:hover,.partner-card:hover{transform:translateY(-4px)}
+  .data-chart:hover{transform:translateY(-3px)}
+  .connect-band .social-icon{transition:transform .2s ease,background-color .2s ease}.connect-band .social-icon:hover{transform:translateY(-3px)}
+  @keyframes page-banner-in{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+}
+@media(prefers-reduced-motion:reduce){.page-hero,.institution-banner{animation:none!important}.topic-grid>a:hover,.partner-card:hover,.data-chart:hover{transform:none!important}}
