@@ -1,0 +1,137 @@
+[
+  {
+    "name": "IRENA",
+    "category": "Multilateral Partnerships",
+    "description": "International Renewable Energy Agency supporting international cooperation and the transition to renewable energy.",
+    "website": "https://www.irena.org/",
+    "image": "assets/partners/partner-01.jpg",
+    "imageAlt": "Illustrative energy image for IRENA; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "World Bank",
+    "category": "Multilateral Partnerships",
+    "description": "Development institution supporting countries through financing, knowledge and programmes, including energy access.",
+    "website": "https://www.worldbank.org/",
+    "image": "assets/partners/partner-02.jpg",
+    "imageAlt": "Illustrative energy image for World Bank; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "African Development Bank",
+    "category": "Multilateral Partnerships",
+    "description": "Regional development bank with an energy portfolio supporting electricity access and renewable energy in Africa.",
+    "website": "https://www.afdb.org/en/topics-and-sectors/sectors/energy-power",
+    "image": "assets/partners/partner-03.jpg",
+    "imageAlt": "Illustrative energy image for African Development Bank; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "International Solar Alliance",
+    "category": "Multilateral Partnerships",
+    "description": "Intergovernmental organisation advancing solar energy through international collaboration and programmes.",
+    "website": "https://isa.int/programmes",
+    "image": "assets/partners/partner-04.jpg",
+    "imageAlt": "Illustrative energy image for International Solar Alliance; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "Sustainable Energy for All",
+    "category": "Initiatives",
+    "description": "Organisation working to accelerate energy access and the energy transition in emerging and developing countries.",
+    "website": "https://www.seforall.org/who-we-are",
+    "image": "assets/partners/partner-05.jpg",
+    "imageAlt": "Illustrative energy image for Sustainable Energy for All; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "Mission 300",
+    "category": "Initiatives",
+    "description": "World Bank Group and African Development Bank Group initiative focused on expanding electricity access in Africa.",
+    "website": "https://www.worldbank.org/ext/en/energizingafrica/faq",
+    "image": "assets/partners/partner-06.jpg",
+    "imageAlt": "Illustrative energy image for Mission 300; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "Mission Innovation",
+    "category": "Initiatives",
+    "description": "International initiative bringing governments together to accelerate clean energy innovation.",
+    "website": "https://mission-innovation.net/",
+    "image": "assets/partners/partner-07.jpg",
+    "imageAlt": "Illustrative energy image for Mission Innovation; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "REEEP",
+    "category": "Initiatives",
+    "description": "Renewable Energy and Energy Efficiency Partnership works to develop clean energy markets and energy access in the Global South.",
+    "website": "https://reeep.org/our-approach/",
+    "image": "assets/partners/partner-08.jpg",
+    "imageAlt": "Illustrative energy image for REEEP; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "REN21",
+    "category": "Co-operation Platforms",
+    "description": "Renewable energy network bringing together stakeholders and sharing knowledge about the renewable energy transition.",
+    "website": "https://www.ren21.net/",
+    "image": "assets/partners/partner-09.jpg",
+    "imageAlt": "Illustrative energy image for REN21; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "Global Solar Council",
+    "category": "Co-operation Platforms",
+    "description": "International industry association connecting the solar sector and representing its voice in global energy discussions.",
+    "website": "https://www.globalsolarcouncil.org/about/",
+    "image": "assets/partners/partner-10.jpg",
+    "imageAlt": "Illustrative energy image for Global Solar Council; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "Clean Energy Ministerial",
+    "category": "Co-operation Platforms",
+    "description": "International forum for collaboration on clean energy policies, programmes and deployment.",
+    "website": "https://www.cleanenergyministerial.org/",
+    "image": "assets/partners/partner-11.jpg",
+    "imageAlt": "Illustrative energy image for Clean Energy Ministerial; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "JinkoSolar",
+    "category": "Bilateral Partnerships",
+    "description": "JinkoSolar offers photovoltaic modules and solar-plus-storage solutions for residential, commercial and utility-scale applications.",
+    "website": "https://www.jinkosolar.com/en/",
+    "image": "assets/partners/partner-12.jpg",
+    "imageAlt": "Illustrative energy image for JinkoSolar; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "Trinasolar",
+    "category": "Bilateral Partnerships",
+    "description": "Trinasolar provides photovoltaic modules, solar tracking systems and energy storage solutions through its solar technology portfolio.",
+    "website": "https://www.trinasolar.com/en-glb/",
+    "image": "assets/partners/partner-13.jpg",
+    "imageAlt": "Illustrative energy image for Trinasolar; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "GIZ",
+    "category": "Bilateral Partnerships",
+    "description": "German international cooperation organisation working on sustainable development, including energy-related projects.",
+    "website": "https://www.giz.de/en/",
+    "image": "assets/partners/partner-14.jpg",
+    "imageAlt": "Illustrative energy image for GIZ; not a project photograph of this organisation",
+    "placeholder": true
+  },
+  {
+    "name": "JICA",
+    "category": "Bilateral Partnerships",
+    "description": "Japan International Cooperation Agency supports development cooperation across sectors including energy and infrastructure.",
+    "website": "https://www.jica.go.jp/english/",
+    "image": "assets/partners/partner-15.jpg",
+    "imageAlt": "Illustrative energy image for JICA; not a project photograph of this organisation",
+    "placeholder": true
+  }
+]
