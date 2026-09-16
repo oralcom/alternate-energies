@@ -1,4 +1,7 @@
 const menuButton = document.querySelector('.menu-toggle');
+const searchOverlay = document.querySelector('.search-overlay');
+document.querySelectorAll('.search-toggle').forEach(button => button.addEventListener('click', () => { if(searchOverlay){ searchOverlay.hidden=false; document.body.classList.add('search-open'); searchOverlay.querySelector('input')?.focus(); }}));
+document.querySelectorAll('.search-close').forEach(button => button.addEventListener('click', () => { if(searchOverlay){ searchOverlay.hidden=true; document.body.classList.remove('search-open'); }}));
 // Animate visible sections once; content stays visible without JavaScript.
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 if (!motionPreference.matches && 'IntersectionObserver' in window) {

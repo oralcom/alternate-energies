@@ -1,6 +1,7 @@
 const fs = require('fs');
 let home = fs.readFileSync('index.html', 'utf8');
 const announcement = '<section class="donate-banner" aria-label="Support renewable energy"><span>Build the renewables-based economy with us.</span><a href="https://buy.stripe.com/fZu3cof8867Bbil45VbMQ00" target="_blank" rel="noopener">Donate today! <span>↗</span></a></section>';
+const searchOverlay = '<section class="search-overlay" hidden><button class="search-close" type="button" aria-label="Close search">&times;</button><form action="index.html#site-search"><label for="overlay-search">What are you looking for?</label><div><input id="overlay-search" name="q" type="search" placeholder="Search services, regions or topics"><button class="button dark">Search</button></div></form></section>';
 home = home.replace(/<section class="donate-banner"[\s\S]*?<\/section>/g, '');
 home = home.replace(/<a class="(?:brand )?sidebar-brand"[\s\S]*?<\/a>/, '<strong>Explore Alternate</strong>');
 home = home.replace('<strong>Explore Alternate</strong>', '<strong>Explore Alternate</strong>');
@@ -25,6 +26,7 @@ home = home.replace(/<section class="statistics-strip"[\s\S]*?<\/section>/g, '')
 home = home.replace('<section class="section process">', statisticsSection+'<section class="section process">');
 home = home.replace('  <div class="intro-strip company-strip">', '  '+missionSection+'\n  <div class="intro-strip company-strip">');
 home = home.replace('<header', announcement+'<header');
+home = home.replace('</header>', '</header>'+searchOverlay);
 fs.writeFileSync('index.html', home);
 const header = home.match(/<header[\s\S]*?<\/header>/)[0] + (home.match(/<div class="sidebar-backdrop"[\s\S]*?<\/aside>/)?.[0] || '');
 let footer = home.match(/<footer[^>]*>[\s\S]*?<\/footer>/)[0];
@@ -34,7 +36,7 @@ home = home.replace(/<footer[^>]*>[\s\S]*?<\/footer>/, footer);
 fs.writeFileSync('index.html', home);
 function page(file, title, description, body) {
  const activeHeader = header.replace(/ aria-current="page"/g, '').replaceAll(`href="${file}"`, `href="${file}" aria-current="page"`);
- fs.writeFileSync(file, `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="${description}"><meta name="theme-color" content="#173c31"><title>${title} | Alternate Energies</title><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a>${announcement}${activeHeader}<main id="main">${body}</main>${footer}</body></html>`);
+ fs.writeFileSync(file, `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="${description}"><meta name="theme-color" content="#173c31"><title>${title} | Alternate Energies</title><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a>${announcement}${activeHeader}${searchOverlay}<main id="main">${body}</main>${footer}</body></html>`);
 }
 function hero(title, intro, breadcrumb='') {return `<section class="page-hero"><div class="breadcrumbs"><a href="index.html">Home</a> / ${breadcrumb || title}</div><h1>${title}</h1><p>${intro}</p></section>`;}
 function cta(service='') {return `<section class="page-cta"><div><h2>Let’s take the next step.</h2><p>Tell us about your location, your property and your plans.</p></div><a class="button lime" href="contact.html${service?'?service='+encodeURIComponent(service):''}#contact">Discuss your project <span>↗</span></a></section>`;}
