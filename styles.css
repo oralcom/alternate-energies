@@ -179,3 +179,4 @@ h2,h3,h4,.section-heading,.leadership-section>h2,.company-timeline h2,.portfolio
 .video-frame video{width:100%;height:100%;display:block;object-fit:cover}
 .video-frame{position:relative}.video-mute{position:absolute;right:16px;bottom:16px;width:42px;height:42px;border:1px solid #d3ed87;border-radius:50%;background:#173c31e8;color:#fff;display:grid;place-items:center;cursor:pointer;font-size:17px;box-shadow:0 5px 14px #061d1966}.video-mute:hover{background:#d3ed87;color:#173c31;transform:scale(1.06)}
 .video-mute svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.video-mute .icon-unmuted{display:none}.video-mute.is-unmuted .icon-muted{display:none}.video-mute.is-unmuted .icon-unmuted{display:block}
+.video-mute{top:16px;bottom:auto;right:16px}
