@@ -164,6 +164,7 @@ document.querySelector('#enquiry-form')?.addEventListener('submit', event => {
 });
 const backTop = document.querySelector('[data-back-top]');
 document.querySelectorAll('.video-frame video').forEach(video => { const io = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting) video.play().catch(()=>{}); else video.pause(); }), {threshold:.55}); io.observe(video); });
+document.querySelectorAll('.video-mute').forEach(button => { const video=button.closest('.video-frame')?.querySelector('video'); if(!video) return; button.addEventListener('click',()=>{video.muted=!video.muted; button.setAttribute('aria-pressed',String(!video.muted)); button.setAttribute('aria-label',video.muted?'Unmute video':'Mute video'); button.querySelector('span').textContent=video.muted?'🔇':'🔊';}); });
 if (backTop) {
   const updateBackTop = () => {
     const atTop = window.scrollY < 160;
