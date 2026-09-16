@@ -163,7 +163,7 @@ document.querySelector('#enquiry-form')?.addEventListener('submit', event => {
   status.append(link);
 });
 const backTop = document.querySelector('[data-back-top]');
-document.querySelectorAll('.video-frame iframe').forEach(frame => { const io = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting){ frame.contentWindow?.postMessage(JSON.stringify({event:'command',func:'playVideo',args:[]}), '*'); } }), {threshold:.55}); io.observe(frame); });
+document.querySelectorAll('.video-frame video').forEach(video => { const io = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting) video.play().catch(()=>{}); else video.pause(); }), {threshold:.55}); io.observe(video); });
 if (backTop) {
   const updateBackTop = () => {
     const atTop = window.scrollY < 160;
