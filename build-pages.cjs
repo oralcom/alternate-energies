@@ -2,7 +2,7 @@ const fs = require('fs');
 let home = fs.readFileSync('index.html', 'utf8');
 const announcement = '<section class="donate-banner" aria-label="Support renewable energy"><span>Build the renewables-based economy with us.</span><a href="https://buy.stripe.com/fZu3cof8867Bbil45VbMQ00" target="_blank" rel="noopener">Donate today! <span>↗</span></a></section>';
 home = home.replace(/<section class="donate-banner"[\s\S]*?<\/section>/g, '');
-home = home.replace(/<a class="brand sidebar-brand"[\s\S]*?<\/a>/, '<strong>Explore Alternate</strong>');
+home = home.replace(/<a class="(?:brand )?sidebar-brand"[\s\S]*?<\/a>/, '<strong>Explore Alternate</strong>');
 home = home.replace('<strong>Explore Alternate</strong>', '<strong>Explore Alternate</strong>');
 const nav = '<nav id="navigation" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="solutions.html">Our Services</a><a href="index.html#locations">Where We Work</a><a href="contact.html">Contact Us</a></nav>';
 home = home.replace(/<nav id="navigation"[\s\S]*?<\/nav>/, nav)
