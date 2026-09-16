@@ -1,6 +1,6 @@
 const fs = require('fs');
 let home = fs.readFileSync('index.html', 'utf8');
-home = home.replace('<strong>Explore Alternate</strong>', '<a class="sidebar-brand" href="index.html"><span class="brand-icon">a</span><span>Alternate<br><small>ENERGIES</small></span></a>');
+home = home.replace('<strong>Explore Alternate</strong>', '<a class="sidebar-brand" href="index.html" aria-label="Alternate Energies home"><span class="brand-icon" aria-hidden="true">a<span>↗</span></span><span>alternate<span class="brand-sub">ENERGIES</span></span></a>');
 const nav = '<nav id="navigation" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="solutions.html">Our Services</a><a href="index.html#locations">Where We Work</a><a href="contact.html">Contact Us</a></nav>';
 home = home.replace(/<nav id="navigation"[\s\S]*?<\/nav>/, nav)
   .replace(/class="brand" href="#"/g, 'class="brand" href="index.html"')
