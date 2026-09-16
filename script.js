@@ -1,5 +1,7 @@
 const menuButton = document.querySelector('.menu-toggle');
 const searchOverlay = document.querySelector('.search-overlay');
+const liveSearchInput = document.querySelector('#overlay-search'), liveSearchResults = document.querySelector('.live-search-results');
+liveSearchInput?.addEventListener('input', () => { const q=liveSearchInput.value.trim().toLowerCase(); if(!liveSearchResults) return; if(!q){liveSearchResults.innerHTML='';return;} const hits=(window.siteSearchIndex||[]).filter(item=>(item.title+' '+item.description+' '+item.text).toLowerCase().includes(q)).slice(0,5); liveSearchResults.innerHTML=hits.length?hits.map(item=>`<a href="${item.url}"><strong>${item.title}</strong><span>${item.description}</span></a>`).join(''):'<p>No matching pages yet.</p>'; });
 document.querySelectorAll('.search-toggle').forEach(button => button.addEventListener('click', () => { if(searchOverlay){ searchOverlay.hidden=false; document.body.classList.add('search-open'); searchOverlay.querySelector('input')?.focus(); }}));
 document.querySelectorAll('.search-close').forEach(button => button.addEventListener('click', () => { if(searchOverlay){ searchOverlay.hidden=true; document.body.classList.remove('search-open'); }}));
 // Animate visible sections once; content stays visible without JavaScript.

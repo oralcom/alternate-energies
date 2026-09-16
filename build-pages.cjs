@@ -1,7 +1,7 @@
 const fs = require('fs');
 let home = fs.readFileSync('index.html', 'utf8');
 const announcement = '<section class="donate-banner" aria-label="Support renewable energy"><span>Build the renewables-based economy with us.</span><a href="https://buy.stripe.com/fZu3cof8867Bbil45VbMQ00" target="_blank" rel="noopener">Donate today! <span>↗</span></a></section>';
-const searchOverlay = '<section class="search-overlay" hidden><button class="search-close" type="button" aria-label="Close search">&times;</button><form action="index.html#site-search"><label for="overlay-search">What are you looking for?</label><div><input id="overlay-search" name="q" type="search" placeholder="Search services, regions or topics"><button class="button dark">Search</button></div></form></section>';
+const searchOverlay = '<section class="search-overlay" hidden><button class="search-close" type="button" aria-label="Close search">&times;</button><form action="index.html#site-search"><label for="overlay-search">What are you looking for?</label><div><input id="overlay-search" name="q" type="search" placeholder="Search services, regions or topics" autocomplete="off"><button class="button dark">Search</button></div><div class="live-search-results" role="status"></div></form></section>';
 home = home.replace(/<section class="donate-banner"[\s\S]*?<\/section>/g, '');
 home = home.replace(/<a class="(?:brand )?sidebar-brand"[\s\S]*?<\/a>/, '<strong>Explore Alternate</strong>');
 home = home.replace('<strong>Explore Alternate</strong>', '<strong>Explore Alternate</strong>');
