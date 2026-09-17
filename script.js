@@ -197,4 +197,4 @@ document.querySelectorAll('.count-up').forEach(counter => {
 });
 
 const cookieBanner=document.querySelector('#cookie-banner'); if(cookieBanner && !localStorage.getItem('ae-cookie-choice')) cookieBanner.hidden=false; document.querySelectorAll('[data-cookie]').forEach(b=>b.addEventListener('click',()=>{localStorage.setItem('ae-cookie-choice',b.dataset.cookie); if(cookieBanner) cookieBanner.hidden=true;}));
-\nconst reviewCards=document.querySelectorAll('.reviews-grid .review-card'); if(reviewCards.length){let reviewIndex=0; reviewCards[0].classList.add('is-active'); setInterval(()=>{reviewCards[reviewIndex].classList.remove('is-active'); reviewIndex=(reviewIndex+1)%reviewCards.length; reviewCards[reviewIndex].classList.add('is-active');},5000);}
+const reviewCards=document.querySelectorAll('.reviews-grid .review-card'); if(reviewCards.length){let reviewIndex=0; reviewCards[0].classList.add('is-active'); setInterval(()=>{reviewCards[reviewIndex].classList.remove('is-active'); reviewIndex=(reviewIndex+1)%reviewCards.length; reviewCards[reviewIndex].classList.add('is-active');},5000);}
