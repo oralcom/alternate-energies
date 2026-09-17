@@ -21,7 +21,7 @@ const work = [
 const h = fs.readFileSync('index.html','utf8');
 const header = h.match(/<header[\s\S]*?<\/header>/)[0];
 const sidebar = h.match(/<div class="sidebar-backdrop"[\s\S]*?<\/aside>/)[0];
-const footer = h.match(/<section class="connect-band"[\s\S]*?<\/footer>/)[0];
+const footer = h.match(/<footer[\s\S]*?<\/footer>/)[0];
 const intro = (title,text) => `<section class="institution-banner"><h1>${title}</h1><p>${text}</p></section>`;
 const link = r => `<a href="${r[0]}.html">${r[1]}</a>`;
 const cards = rows => `<div class="topic-grid">${rows.map(r=>`<a href="${r[0]}.html"><h2>${r[1]} <span aria-hidden="true">&#8599;</span></h2><p>${r[3]}</p></a>`).join('')}</div>`;
