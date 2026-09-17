@@ -195,3 +195,5 @@ document.querySelectorAll('.count-up').forEach(counter => {
   if ('IntersectionObserver' in window) new IntersectionObserver(entries => entries.forEach(entry => entry.isIntersecting && animate()), { threshold: .35 }).observe(counter);
   else animate();
 });
+
+const cookieBanner=document.querySelector('#cookie-banner'); if(cookieBanner && !localStorage.getItem('ae-cookie-choice')) cookieBanner.hidden=false; document.querySelectorAll('[data-cookie]').forEach(b=>b.addEventListener('click',()=>{localStorage.setItem('ae-cookie-choice',b.dataset.cookie); if(cookieBanner) cookieBanner.hidden=true;}));
