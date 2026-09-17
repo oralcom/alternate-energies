@@ -30,6 +30,7 @@ home = home.replace(/<section class="statistics-strip"[\s\S]*?<\/section>/g, '')
 home = home.replace('<section class="section process">', statisticsSection+'<section class="section process">');
 home = home.replace('  <div class="intro-strip company-strip">', '  '+missionSection+'\n  <div class="intro-strip company-strip">');
 home = home.replace(/\s*<section class="video-section">[\s\S]*?<\/section>/g, '');
+home = home.replace(/\s*<section class="reviews-section section"[\s\S]*?<\/section>/g, '');
 home = home.replace('<section class="contact section"', videoSection+reviewsSection+'<section class="contact section"');
 home = home.replace('<header', announcement+'<header');
 home = home.replace('</header>', '</header>'+searchOverlay);
