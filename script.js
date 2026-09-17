@@ -1,4 +1,5 @@
 const menuButton = document.querySelector('.menu-toggle');
+document.querySelectorAll('.amount-grid button').forEach(b=>b.addEventListener('click',()=>{const i=document.querySelector('#donation-amount'),d=document.querySelector('#donation-display');if(i)i.value=b.dataset.amount;if(d)d.textContent='£'+Number(b.dataset.amount).toLocaleString()}));
 const searchOverlay = document.querySelector('.search-overlay');
 const liveSearchInput = document.querySelector('#overlay-search'), liveSearchResults = document.querySelector('.live-search-results');
 liveSearchInput?.addEventListener('input', () => { const q=liveSearchInput.value.trim().toLowerCase(); if(!liveSearchResults) return; if(!q){liveSearchResults.innerHTML='';return;} const hits=(window.siteSearchIndex||[]).filter(item=>(item.title+' '+item.description+' '+item.text).toLowerCase().includes(q)).slice(0,5); liveSearchResults.innerHTML=hits.length?hits.map(item=>`<a href="${item.url}"><strong>${item.title}</strong><span>${item.description}</span></a>`).join(''):'<p>No matching pages yet.</p>'; });
