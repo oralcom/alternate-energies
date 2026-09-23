@@ -204,3 +204,4 @@ h2,h3,h4,.section-heading,.leadership-section>h2,.company-timeline h2,.portfolio
 .floating-back-top{display:none!important}.whatsapp-float svg{width:20px;height:20px;fill:currentColor}.whatsapp-float{transition:transform .2s ease}
 .whatsapp-float{display:inline-flex;align-items:center;justify-content:center;line-height:1;min-height:42px}.whatsapp-float svg{display:block;flex:0 0 22px;width:22px;height:22px;overflow:visible}.whatsapp-float b{line-height:1;white-space:nowrap}
 .whatsapp-float{width:52px;height:52px;padding:0;border-radius:50%;gap:0}.whatsapp-float svg{width:28px;height:28px}.whatsapp-float b{position:absolute;right:62px;background:#fff;color:var(--green);padding:8px 11px;border-radius:6px;box-shadow:0 5px 15px #173c3125;white-space:nowrap}.whatsapp-float:hover b{display:block}@media(max-width:600px){.whatsapp-float{width:50px;height:50px}.whatsapp-float b{display:none}}
+.whatsapp-float img{width:28px;height:28px;object-fit:contain}
